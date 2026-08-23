@@ -21,7 +21,7 @@ export default function Home() {
     setNotes("");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/generate", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/generate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
